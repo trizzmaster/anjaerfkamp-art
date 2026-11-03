@@ -1,0 +1,620 @@
+/* Grundlegendes Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    line-height: 1.7;
+    color: #3e332e; 
+    background-color: #ebdcd0; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, .nav-logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+}
+
+/* 1. Menüband (Navbar) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(235, 220, 208, 0.98); 
+    box-shadow: 0 2px 12px rgba(62, 51, 46, 0.08);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 100% !important;
+    max-height: 70px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    vertical-align: middle !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.navbar img, .nav-logo img, a.nav-logo img {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #705e55; 
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #3e332e;
+}
+
+.menu-checkbox, .menu-button {
+    display: none;
+}
+
+/* 2. Titelseite (Hero) */
+.hero-section {
+    height: 75vh;
+    background: linear-gradient(rgba(62, 51, 46, 0.4), rgba(62, 51, 46, 0.4)), url('bildhintergrund.jpg') no-repeat center center/115%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 70px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+    max-width: 900px;
+    padding: 0 20px;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.25);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #d1bfae; 
+    color: #3e332e;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3e332e;
+    color: #ebdcd0;
+}
+
+/* Allgemeine Sektionen */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+    color: #3e332e;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #a38c7a; 
+    margin: 15px auto 0 auto;
+}
+
+/* 3. Über Mich & Raumkonzepte */
+.speech-section {
+    background-color: #ffffff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.about-content {
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+.concepts-section {
+    background-color: #f7f1eb; 
+    border-top: 1px solid #d1bfae;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #705e55;
+    max-width: 800px;
+    margin: -20px auto 40px auto;
+    font-size: 1.1rem;
+}
+
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.concept-card {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    border-bottom: 3px solid #d1bfae;
+}
+
+.concept-card h3 {
+    margin-top: 0;
+    color: #3e332e;
+}
+/* 4. Bildbeispiele, Slider-Wechsler & Lightbox */
+.gallery-section {
+    background-color: #e3d2c4; 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Dreistufige Logik für absolut fehlerfreies Auf- und Zuklappen von 8 Bildern */
+.gallery-toggle-input {
+    display: none;
+}
+
+/* Verstecke die Stufen standardmäßig */
+.gallery-item.tier-1,
+.gallery-item.tier-2 {
+    display: none;
+}
+
+/* Sichtbarkeit der Buttons initial */
+#btn-show-6 { display: inline-block !important; }
+#btn-show-8, #btn-hide-all { display: none !important; }
+
+/* STUFE 2 AKTIV (6 Bilder sichtbar): */
+#gallery-stage-6:checked ~ .gallery-grid .gallery-item.tier-1 {
+    display: flex !important;
+}
+#gallery-stage-6:checked ~ .gallery-actions #btn-show-6 { display: none !important; }
+#gallery-stage-6:checked ~ .gallery-actions #btn-show-8 { display: inline-block !important; }
+#gallery-stage-6:checked ~ .gallery-actions #btn-hide-all { display: none !important; }
+
+/* STUFE 3 AKTIV (Alle 8 Bilder sichtbar): */
+#gallery-stage-8:checked ~ .gallery-grid .gallery-item.tier-1,
+#gallery-stage-8:checked ~ .gallery-grid .gallery-item.tier-2 {
+    display: flex !important;
+}
+#gallery-stage-8:checked ~ .gallery-actions #btn-show-6,
+#gallery-stage-8:checked ~ .gallery-actions #btn-show-8 { display: none !important; }
+#gallery-stage-8:checked ~ .gallery-actions #btn-hide-all { display: inline-block !important; }
+
+.gallery-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-load-more {
+    display: inline-block;
+    border: none;
+    font-family: inherit;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(62, 51, 46, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.image-switcher, .lightbox-switcher {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #f7f3ee; 
+    overflow: hidden;
+}
+
+.switch-input {
+    display: none;
+}
+
+.switcher-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-trigger {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+}
+
+.switcher-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    padding: 15px; 
+    box-sizing: border-box;
+    opacity: 0; 
+    transition: opacity 0.4s ease;
+}
+
+.switch-input:nth-of-type(1):checked ~ .switcher-images .img-canvas,
+.switch-input:nth-of-type(2):checked ~ .switcher-images .img-room {
+    opacity: 1;
+    z-index: 2;
+}
+
+.switcher-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot-label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(62, 51, 46, 0.3);
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.dot-label:hover {
+    transform: scale(1.2);
+}
+
+.switch-input:nth-of-type(1):checked ~ .switcher-dots .dot-label:nth-of-type(1),
+.switch-input:nth-of-type(2):checked ~ .switcher-dots .dot-label:nth-of-type(2) {
+    background-color: #3e332e;
+    transform: scale(1.1);
+}
+
+/* Reine CSS Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 28, 24, 0.93);
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.lightbox-overlay:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-close-zone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-out;
+    z-index: 1;
+}
+
+.lightbox-dialog {
+    position: relative;
+    width: 90%;
+    max-width: 650px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 5;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.lightbox-close-btn {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: #fff;
+    font-size: 35px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lightbox-close-btn:hover {
+    color: #d1bfae;
+}
+
+.lightbox-switcher {
+    background-color: #fff;
+}
+
+.lightbox-switcher .switcher-images img {
+    padding: 0;
+}
+
+.gallery-info {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: #3e332e;
+}
+
+.gallery-meta {
+    margin: 0 0 15px 0;
+    color: #705e55;
+    font-size: 0.9rem;
+}
+
+.gallery-details {
+    text-align: left;
+    background-color: #ebdcd0;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-top: auto;
+}
+
+.gallery-details[open] {
+    padding: 12px;
+}
+
+.gallery-details summary {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #a38c7a;
+    cursor: pointer;
+    text-align: center;
+}
+
+.gallery-details summary:hover {
+    color: #3e332e;
+}
+
+.gallery-details p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #3e332e;
+    margin: 10px 0 0 0;
+}
+
+/* 5. Kontakt & Instagram */
+.contact-section {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-box {
+    margin-top: 30px;
+    padding: 35px;
+    background-color: #ebdcd0;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-box p {
+    margin: 12px 0;
+}
+
+.contact-box a {
+    color: #a38c7a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-instagram {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #c4b3a5;
+    padding-top: 15px;
+    margin-top: 15px !important;
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ig-icon {
+    width: 20px;
+    height: 20px;
+    fill: #a38c7a;
+}
+
+/* 6. Footer */
+footer {
+    background-color: #241c18; 
+    color: #c2b5ae;
+    padding: 50px 0 25px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-legal, .footer-privacy {
+    flex: 1;
+    min-width: 280px;
+}
+
+footer h3 {
+    color: #ebdcd0;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #362b25;
+    padding-top: 20px;
+    color: #7d6f67;
+}
+
+.footer-ig-link {
+    color: #ebdcd0;
+    text-decoration: none;
+}
+
+/* SMARTPHONE-ANSICHT */
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+
+    .menu-button span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #3e332e;
+        border-radius: 2px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ebdcd0;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        display: none; 
+    }
+
+    .menu-checkbox:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .menu-checkbox:checked ~ .menu-button span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg) !important;
+    }
+    .menu-checkbox:checked ~ .menu-button span:nth-child(2) {
+        opacity: 0 !important;
+        transform: scale(0);
+    }
+    .menu-checkbox:checked ~ .menu-button span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg) !important;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; 
+        line-height: 1.3;
+    }
+    
+    .hero-section {
+        background-size: auto 115%;
+        margin-top: 70px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+    .about-content h2 {
+        text-align: center;
+    }
+    .about-content h2::after {
+        margin: 15px auto 0 auto;
+    }
+    .principles-list {
+        text-align: left;
+        display: inline-block;
+    }
+}

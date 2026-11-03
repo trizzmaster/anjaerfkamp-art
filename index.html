@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anja Erfkamp | Bildende Kunst & Farbkonzepte</title>
+    <!-- Einbindung der weicheren Schriftarten -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Das Menüband oben mit ausklappbarem Smartphone-Menü -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Nur das Logo als klickbarer Link zur Startseite -->
+            <a href="#home" class="nav-logo">
+                <img src="logo.png" alt="Anja Erfkamp Logo" class="nav-logo-img">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#ueber-mich">Über Mich</a></li>
+                <li><a href="#konzepte">Raumkonzepte</a></li>
+                <li><a href="#galerie">Bildbeispiele</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2. Titelseite (Hero) -->
+    <header id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Bildende Kunst & Farbkonzepte</h1>
+            <p class="hero-subtitle">Für spürbare Raumästhetik und visuelles Wohlbefinden. Entdecken Sie, wie fein abgestimmte Kunst Räume verändern kann.</p>
+            <a href="#galerie" class="btn">Werke ansehen</a>
+        </div>
+    </header>
+    <!-- 3. Über Mich Seite (Volle Textbreite) -->
+    <section id="ueber-mich" class="section speech-section">
+        <div class="container">
+            <div class="about-content" style="max-width: 850px; margin: 0 auto;">
+                <h2 style="text-align: center;">Über Mich</h2>
+                <p>Schön, dass Sie hier sind! Ich bin <strong>Anja Erfkamp</strong>. Als ausgebildete Farb- und Kunsttherapeutin verbinde ich fundiertes Fachwissen über die menschliche Wahrnehmung mit einem feinsinnigen Gespür für Ästhetik.</p>
+                <p>Bilder tun weit mehr, als eine leere Wand zu füllen. Sie steuern maßgeblich, wie wir einen Raum wahrnehmen, wie wir ankommen und zur Ruhe kommen. Meine Arbeiten entstehen aus dem Fokus auf handwerkliche Harmonie, visuelle Balance und eine spürbar ausgeglichene Raumatmosphäre.</p>
+                <p>Unsere moderne Umwelt ist oft von visueller Hektik geprägt. Meine Kunstwerke setzen hier einen bewussten Gegenpol. Durch eine durchdachte Komposition aus Farbe, Form und Struktur lade ich das Auge zum Verweilen ein, entlaste das Nervensystem und ordne den Geist.</p>
+                <p><strong>Die gestalterischen Prinzipien meiner Arbeit:</strong></p>
+                <ul class="principles-list" style="padding-left: 20px;">
+                    <li><strong>Ausgewogene Farbpaletten:</strong> Harmonisch abgestimmte Zwischentöne, sanfte Natur- und Sandnuancen sowie beruhigende Blau- und Grüntöne für natürliche Tiefe.</li>
+                    <li><strong>Fließende Formen:</strong> Weiche Übergänge und organische Bewegungen, die dem Auge Halt und dem Geist Raum zum Atmen geben.</li>
+                    <li><strong>Subtile Texturen:</strong> Gezielter Einsatz von Schichten und haptischen Strukturen für einen bewussten, entschleunigenden Moment.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3b. Raumkonzepte & Zielgruppen -->
+    <section id="konzepte" class="section concepts-section">
+        <div class="container">
+            <h2>Gegenpole für sensible Räume</h2>
+            <p class="section-subtitle">Sie leiten ein Hotel, eine medizinische Einrichtung, ein Pflegeheim oder möchten Ihre privaten Räumlichkeiten professionell gestalten? Ich entwickle maßgeschneiderte Bild- und Farbkonzepte.</p>
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h3>Private Wohnräume</h3>
+                    <p>Visuelle Oasen für Ihr Zuhause, die Ihnen nach einem langen Tag einen Ort der Erdung und des Aufatmens schenken.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Hotellerie & Hospitality</h3>
+                    <p>Stimmige visuelle Konzepte in Zimmern oder Lounges unterstützen echten Schlafkomfort und die gewünschte Atmosphäre von Ruhe und gehobener Entspannung.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Arztpraxen & Kliniken</h3>
+                    <p>Kunst in medizinischen Einrichtungen reduziert nachweislich Wartezimmer-Stress sowie Angstgefühle bei Patienten und schafft einen angenehmeren Arbeitsraum.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Pflege- & Senioreneinrichtungen</h3>
+                    <p>Menschen mit Demenz oder kognitiven Einschränkungen reagieren stark auf emotionale Schwingungen. Meine Bilder vermitteln Orientierung und spenden Geborgenheit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 4. Bild Beispiele Seite (8 Werke mit Klick-Umschaltung und dreistufiger Nachlade-Funktion) -->
+    <section id="galerie" class="section gallery-section">
+        <div class="container">
+            <h2>Bildbeispiele</h2>
+            <p class="section-subtitle">Klicken Sie auf ein Werk für die Großansicht. Über die Punkte wechseln Sie zur KI-Raumansicht.</p>
+            
+            <!-- Dreistufiges Radio-System zum Auf- und Zuklappen (3 -> 6 -> 8 -> 3 Bilder) -->
+            <input type="radio" id="gallery-stage-3" name="gallery-view" checked class="gallery-toggle-input">
+            <input type="radio" id="gallery-stage-6" name="gallery-view" class="gallery-toggle-input">
+            <input type="radio" id="gallery-stage-8" name="gallery-view" class="gallery-toggle-input">
+
+            <div class="gallery-grid">
+                
+                <!-- Bild 1 -->
+                <div class="gallery-item">
+                    <div class="image-switcher">
+                        <input type="radio" id="b1-view1" name="slide1" checked class="switch-input">
+                        <input type="radio" id="b1-view2" name="slide1" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-1" class="lightbox-trigger">
+                                <img src="bild1.jpg" alt="Kunstwerk 1" class="img-canvas">
+                                <img src="bild1-raum.jpg" alt="Kunstwerk 1 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b1-view1" class="dot-label"></label><label for="b1-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-1" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b1-view1" name="lightbox-slide1" checked class="switch-input"><input type="radio" id="lightbox-b1-view2" name="lightbox-slide1" class="switch-input"><div class="switcher-images"><img src="bild1.jpg" alt="Kunstwerk 1 Groß" class="img-canvas"><img src="bild1-raum.jpg" alt="Kunstwerk 1 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b1-view1" class="dot-label"></label><label for="lightbox-b1-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Schichten der Zeit</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Die warmen Erd und Taupetöne vermitteln Ruhe, Geborgenheit und Stabilität.</p></details></div>
+                </div>
+
+                <!-- Bild 2 -->
+                <div class="gallery-item">
+                    <div class="image-switcher">
+                        <input type="radio" id="b2-view1" name="slide2" checked class="switch-input">
+                        <input type="radio" id="b2-view2" name="slide2" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-2" class="lightbox-trigger">
+                                <img src="bild2.jpg" alt="Kunstwerk 2" class="img-canvas">
+                                <img src="bild2-raum.jpg" alt="Kunstwerk 2 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b2-view1" class="dot-label"></label><label for="b2-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-2" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b2-view1" name="lightbox-slide2" checked class="switch-input"><input type="radio" id="lightbox-b2-view2" name="lightbox-slide2" class="switch-input"><div class="switcher-images"><img src="bild2.jpg" alt="Kunstwerk 2 Groß" class="img-canvas"><img src="bild2-raum.jpg" alt="Kunstwerk 2 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b2-view1" class="dot-label"></label><label for="lightbox-b2-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Stille Bewegung</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Eine Verbindung aus Ruhe und Dynamik. Die dunklen Braunnuancen verleihen dem Bild Tiefe und Kraft, während die hellen Beige und Cremetöne Leichtigkeit und Harmonie ausstrahlen.</p></details></div>
+                </div>
+
+                <!-- Bild 3 -->
+                <div class="gallery-item">
+                    <div class="image-switcher">
+                        <input type="radio" id="b3-view1" name="slide3" checked class="switch-input">
+                        <input type="radio" id="b3-view2" name="slide3" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-3" class="lightbox-trigger">
+                                <img src="bild3.jpg" alt="Kunstwerk 3" class="img-canvas">
+                                <img src="bild3-raum.jpg" alt="Kunstwerk 3 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b3-view1" class="dot-label"></label><label for="b3-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-3" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b3-view1" name="lightbox-slide3" checked class="switch-input"><input type="radio" id="lightbox-b3-view2" name="lightbox-slide3" class="switch-input"><div class="switcher-images"><img src="bild3.jpg" alt="Kunstwerk 3 Groß" class="img-canvas"><img src="bild3-raum.jpg" alt="Kunstwerk 3 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b3-view1" class="dot-label"></label><label for="lightbox-b3-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Fernweh</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Türkis und blau mit einem Horizont aus Gold. Für ein Gefühl zwischen Stille und Weite. Als würde das Licht das Meer berühren.</p></details></div>
+                </div>
+                <!-- Bild 4 (Ausklappbar) -->
+                <div class="gallery-item tier-1">
+                    <div class="image-switcher">
+                        <input type="radio" id="b4-view1" name="slide4" checked class="switch-input">
+                        <input type="radio" id="b4-view2" name="slide4" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-4" class="lightbox-trigger">
+                                <img src="bild4.jpg" alt="Kunstwerk 4" class="img-canvas"><img src="bild4-raum.jpg" alt="Kunstwerk 4 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b4-view1" class="dot-label"></label><label for="b4-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-4" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b4-view1" name="lightbox-slide4" checked class="switch-input"><input type="radio" id="lightbox-b4-view2" name="lightbox-slide4" class="switch-input"><div class="switcher-images"><img src="bild4.jpg" alt="Kunstwerk 4 Groß" class="img-canvas"><img src="bild4-raum.jpg" alt="Kunstwerk 4 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b4-view1" class="dot-label"></label><label for="lightbox-b4-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Im Gleichgewicht</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Zwischen Tiefe und Gleichgewicht entsteht ein Raum für Ruhe. Ein Moment zum Innehalten, Durchatmen und Ankommen bei sich selbst.</p></details></div>
+                </div>
+
+                <!-- Bild 5 (Ausklappbar) -->
+                <div class="gallery-item tier-1">
+                    <div class="image-switcher">
+                        <input type="radio" id="b5-view1" name="slide5" checked class="switch-input">
+                        <input type="radio" id="b5-view2" name="slide5" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-5" class="lightbox-trigger">
+                                <img src="bild5.jpg" alt="Kunstwerk 5" class="img-canvas"><img src="bild5-raum.jpg" alt="Kunstwerk 5 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b5-view1" class="dot-label"></label><label for="b5-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-5" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b5-view1" name="lightbox-slide5" checked class="switch-input"><input type="radio" id="lightbox-b5-view2" name="lightbox-slide5" class="switch-input"><div class="switcher-images"><img src="bild5.jpg" alt="Kunstwerk 5 Groß" class="img-canvas"><img src="bild5-raum.jpg" alt="Kunstwerk 5 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b5-view1" class="dot-label"></label><label for="lightbox-b5-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Mut</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Spuren aus Gold, fließende Linien und freie Formen erzählen von Wandel, Mut und dem Vertrauen, dem eigenen inneren Weg zu folgen.</p></details></div>
+                </div>
+
+                <!-- Bild 6 (Ausklappbar) -->
+                <div class="gallery-item tier-1">
+                    <div class="image-switcher">
+                        <input type="radio" id="b6-view1" name="slide6" checked class="switch-input">
+                        <input type="radio" id="b6-view2" name="slide6" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-6" class="lightbox-trigger">
+                                <img src="bild6.jpg" alt="Kunstwerk 6" class="img-canvas"><img src="bild6-raum.jpg" alt="Kunstwerk 6 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b6-view1" class="dot-label"></label><label for="b6-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-6" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b6-view1" name="lightbox-slide6" checked class="switch-input"><input type="radio" id="lightbox-b6-view2" name="lightbox-slide6" class="switch-input"><div class="switcher-images"><img src="bild6.jpg" alt="Kunstwerk 6 Groß" class="img-canvas"><img src="bild6-raum.jpg" alt="Kunstwerk 6 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b6-view1" class="dot-label"></label><label for="lightbox-b6-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Abgrenzen</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Nicht jede Grenze ist eine Mauer. Manchmal ist sie einfach ein Weg sich treu zu bleiben. Zu spüren, was einem gut tut und wovon man Abstand braucht.</p></details></div>
+                </div>
+
+
+                <!-- Bild 7 (Sichtbar ab Stufe 3 - Bilder 7 bis 8) -->
+                <div class="gallery-item tier-2">
+                    <div class="image-switcher">
+                        <input type="radio" id="b7-view1" name="slide7" checked class="switch-input">
+                        <input type="radio" id="b7-view2" name="slide7" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-7" class="lightbox-trigger">
+                                <img src="bild7.jpg" alt="Kunstwerk 7" class="img-canvas"><img src="bild7-raum.jpg" alt="Kunstwerk 7 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b7-view1" class="dot-label"></label><label for="b7-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-7" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b7-view1" name="lightbox-slide7" checked class="switch-input"><input type="radio" id="lightbox-b7-view2" name="lightbox-slide7" class="switch-input"><div class="switcher-images"><img src="bild7.jpg" alt="Kunstwerk 7 Groß" class="img-canvas"><img src="bild7-raum.jpg" alt="Kunstwerk 7 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b7-view1" class="dot-label"></label><label for="lightbox-b7-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Im Einklang</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Zwischen Wellen, Licht und einer kleinen Sehnsucht nach Meer. Dieses Bild fühlt sich an wie Urlaub für die Seele.</p></details></div>
+                </div>
+
+                <!-- Bild 8 (Sichtbar ab Stufe 3) -->
+                <div class="gallery-item tier-2">
+                    <div class="image-switcher">
+                        <input type="radio" id="b8-view1" name="slide8" checked class="switch-input">
+                        <input type="radio" id="b8-view2" name="slide8" class="switch-input">
+                        <div class="switcher-images">
+                            <a href="#lightbox-8" class="lightbox-trigger">
+                                <img src="bild8.jpg" alt="Kunstwerk 8" class="img-canvas"><img src="bild8-raum.jpg" alt="Kunstwerk 8 im Raum" class="img-room">
+                            </a>
+                        </div>
+                        <div class="switcher-dots"><label for="b8-view1" class="dot-label"></label><label for="b8-view2" class="dot-label"></label></div>
+                    </div>
+                    <div id="lightbox-8" class="lightbox-overlay"><a href="#galerie" class="lightbox-close-zone"></a><div class="lightbox-dialog"><a href="#galerie" class="lightbox-close-btn">&times;</a><div class="lightbox-switcher"><input type="radio" id="lightbox-b8-view1" name="lightbox-slide8" checked class="switch-input"><input type="radio" id="lightbox-b8-view2" name="lightbox-slide8" class="switch-input"><div class="switcher-images"><img src="bild8.jpg" alt="Kunstwerk 8 Groß" class="img-canvas"><img src="bild8-raum.jpg" alt="Kunstwerk 8 im Raum Groß" class="img-room"></div><div class="switcher-dots"><label for="lightbox-b8-view1" class="dot-label"></label><label for="lightbox-b8-view2" class="dot-label"></label></div></div></div></div>
+                    <div class="gallery-info"><h3>Sehnsucht</h3><p class="gallery-meta">100 x 70 cm, Acryl auf Leinwand</p><details class="gallery-details"><summary>Beschreibung anzeigen</summary><p>Kunst, die Ruhe ausstrahlt und dennoch lebendig ist. Ein Zusammenspiel aus sanften Naturtönen, kraftvollen Strukturen und goldenen Akzenten. Die kreisförmige Bewegung lädt dazu ein, den Blick schweifen zu lassen, innezuhalten und für einen Moment zur Ruhe zu kommen.</p></details></div>
+                </div>
+
+            </div>
+            <!-- Die 3 Schalter-Tasten zum Auf- und Zuklappen der Galerie (Komplett im Label) -->
+            <div class="gallery-actions">
+                <label for="gallery-stage-6" class="btn btn-load-more" id="btn-show-6">Weitere Werke anzeigen &darr;</label>
+                <label for="gallery-stage-8" class="btn btn-load-more" id="btn-show-8">Alle Werke anzeigen &darr;</label>
+                <label for="gallery-stage-3" class="btn btn-load-more" id="btn-hide-all">Weniger Werke anzeigen &uarr;</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Kontakt -->
+    <section id="kontakt" class="section contact-section">
+        <div class="container">
+            <h2>Kontakt & Projektanfragen</h2>
+            <p>Gerne entwickle ich maßgeschneiderte Bild- und Farbkonzepte, die exakt auf die Bedürfnisse Ihrer Zielgruppe und die Architektur Ihrer Räume abgestimmt sind.</p>
+            <p>Ich freue mich über Ihre Nachricht!</p>
+            
+            <div class="contact-box">
+                <p><strong>E-Mail:</strong> <a href="mailto:anjaerfkampart@gmail.com">anjaerfkampart@gmail.com</a></p>
+                <p class="contact-instagram">
+                    <strong>Instagram:</strong>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="instagram-link">
+                        <svg class="ig-icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        @anja.erfkamp.art
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Fußzeile -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-legal">
+                <h3>Impressum</h3>
+                <p><strong>Angaben gemäß § 5 DDG:</strong></p>
+                <p>Anja Erfkamp<br>Haidlandsring 49<br>22175 Hamburg</p>
+                <p><strong>Kontakt:</strong><br>E-Mail: anjaerfkampart@gmail.com</p>
+            </div>
+            
+            <div class="footer-privacy">
+                <h3>Datenschutz & Social Media</h3>
+                <p>Diese Webseite ist rein informativ. Es werden hier keine personenbezogenen Daten über Formulare erhoben. Beim Aufruf der Seite registriert GitHub Pages automatisch IP-Adressen in Server-Logfiles, um die Sicherheit zu gewährleisten.</p>
+                <p><strong>Instagram:</strong> Auf dieser Seite ist ein Link zum Social-Media-Netzwerk Instagram integriert. Erst wenn du aktiv auf das Symbol klickst, wirst du auf die Plattform von Instagram weitergeleitet, wo deren Datenschutzrichtlinien gelten.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Anja Erfkamp. Alle Rechte vorbehalten. | 
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-ig-link">
+                    Instagram Profil
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
